@@ -14,6 +14,7 @@ def main():
         #Ask for player action--
         player_combat_action()
 
+        pass
     elif event == "treasure":
         # give loot
         pass
