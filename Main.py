@@ -1,22 +1,22 @@
-from asyncio import events
+#main.py
+
 from random import random
 
 from Actors import player
 from EventGen import player_combat_action
+import EventGen
+
 
 def main():
-   
-    while player.hp > 0:
-        event = random.choice(events)
-    if event == "enemy":
-        print ("An enemy appears!")
-       
-        #Ask for player action--
-        player_combat_action()
 
-        pass
-    elif event == "treasure":
-        # give loot
-        pass
-    else:
-        print("Nothing Happened!")
+    print("Welcome to the Text-Based RPG!")
+
+    while player.hp > 0:
+        EventGen.handle_event(player)
+
+    # More game logic
+
+    print ("Game over! Thanks for playing!")
+
+if __name__ == "__main__":
+    main()
